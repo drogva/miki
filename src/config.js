@@ -7,11 +7,7 @@ const configService = {
 };
 
 module.exports = {
+    ...configService,
     mode: 'development', // 또는 'production'
     // 다른 webpack 구성 옵션들...
 };
-
-
-
-
-module.exports = configService;
