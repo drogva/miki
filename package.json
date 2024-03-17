@@ -1,0 +1,23 @@
+{
+  "name": "miki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "node hello.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mikro-orm/core": "^6.1.10",
+    "mikro-orm": "^6.1.10",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.2.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
