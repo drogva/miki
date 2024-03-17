@@ -2,10 +2,8 @@ FROM node:latest
 
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
 # Install npm dependencies
+COPY package*.json ./
 RUN npm install
 
 # Copy webpack configuration files
@@ -20,5 +18,5 @@ RUN npm run build
 # Expose the port the app runs on
 EXPOSE 8080
 
-# Command to run the app
-CMD ["node", "hello.js"]
+# Command to run the application
+CMD ["node", "src/hello.js"]
