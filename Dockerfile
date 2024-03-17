@@ -1,3 +1,6 @@
+# 기반 이미지 설정
+FROM node:latest
+
 # 작업 디렉토리를 /usr/src/app으로 설정
 WORKDIR /usr/src/app
 
