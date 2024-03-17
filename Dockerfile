@@ -1,15 +1,23 @@
-# 기반 이미지 설정
-FROM node:latest
+# 베이스 이미지 설정
+FROM node:12.18.1
 
-# 작업 디렉토리를 /usr/src/app으로 설정
-WORKDIR /usr/src/app
+# 관리하는 사람
+MAINTAINER DaEunShim
 
-# 소스 코드 및 의존성 파일을 복사
-COPY package*.json ./
-COPY . .
+# dockerfile이 동작할 디렉터리 생성 
+RUN mkdir /app
 
-# npm을 사용하여 필요한 모듈 설치
+# /app 을 기본 디렉터리로 설정
+WORKDIR /app
+
+#현재 dockerfile 있는 경로의 모든 파일을 /app에 복사
+COPY . /app
+
+# npm install 실행
 RUN npm install
 
-# 어플리케이션 실행을 위한 명령어 설정
+# 가상 머신에서 오픈할 포트번호 지정
+EXPOSE 3000
+
+# 실행할 명령어 작성
 CMD ["npm", "start"]
