@@ -4,8 +4,9 @@
   "description": "",
   "main": "hello.js",
   "scripts": {
-
-    "build": "webpack"
+   
+    "build": "webpack",
+    "start": "node hello.js"
   },
   "keywords": [],
   "author": "",
