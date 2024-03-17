@@ -7,4 +7,4 @@ RUN npm install
 
 COPY ./src/ ./src/
 
-CMD ["node", "src/hello.js"]
+CMD ["node", "src/hello.js", "&"]
